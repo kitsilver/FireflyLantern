@@ -78,8 +78,8 @@ void loop() {
     }
       }
 
-    switch (mode) {
-      case 0:
+    switch (mode) { // These are all the lighting profiles you can switch to. 
+      case 0: // Full brightness with firefly "flares"
           MAX_LED_BRIGHTNESS = 4095;    // 4095
           MAX_FADERS = 16;              // 16
           MIN_IDLE_BRIGHTNESS = 50;      // 0
@@ -91,7 +91,7 @@ void loop() {
           fireflySleepinessLevel = 20;  // 15
           flare = true;
           break;
-      case 1:
+      case 1: // Around half brightness with firefly "flares"
           MAX_LED_BRIGHTNESS = 300;    // 4095
           MAX_FADERS = 16;              // 16
           MIN_IDLE_BRIGHTNESS = 50;      // 0
@@ -103,7 +103,7 @@ void loop() {
           fireflySleepinessLevel = 50;  // 15
           flare = true;
           break;
-      case 2:
+      case 2: // Full brightness with light "warble", no flares.
           MAX_LED_BRIGHTNESS = 4095;    // 4095
           MAX_FADERS = 16;              // 16
           MIN_IDLE_BRIGHTNESS = 50;      // 0
@@ -115,7 +115,7 @@ void loop() {
           fireflySleepinessLevel = 20;  // does not apply here as 'flare' is false
           flare = false;
           break;
-      case 3:
+      case 3: // Half brightness with light "warble", no flares.
           MAX_LED_BRIGHTNESS = 300;    // 4095
           MAX_FADERS = 16;              // 16
           MIN_IDLE_BRIGHTNESS = 50;      // 0
